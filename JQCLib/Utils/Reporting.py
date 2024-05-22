@@ -1,3 +1,7 @@
+###########################################
+#      Code By Jørgen Mjaaseth, 2023      #
+###########################################
+
 import os
 from colorama import Fore, Style
  

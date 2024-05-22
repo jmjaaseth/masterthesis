@@ -1,6 +1,10 @@
+###########################################
+#      Code By Jørgen Mjaaseth, 2023      #
+###########################################
+
 import numpy as np
 from JQCLib.Preprocessing.Utils import ToQiskit
-from JQCLib.Metrics.MeyerHilbert import HilbertSchmidtNorm, MeyerWallach
+from JQCLib.Metrics.QiskitMetrics import HilbertSchmidtNorm, MeyerWallach
 
 class MetricWrapper:
 

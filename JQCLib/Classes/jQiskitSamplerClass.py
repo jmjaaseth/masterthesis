@@ -1,3 +1,7 @@
+###########################################
+#      Code By Jørgen Mjaaseth, 2023      #
+###########################################
+
 import numpy as np
 
 #Qiskit
@@ -6,8 +10,8 @@ from qiskit.circuit import ParameterVector
 from qiskit.primitives import Sampler
 
 #Thesis imports
-from Wrappers.LibClasses import QCSampler
-from Wrappers.Utils import fromRaw
+from JQCLib.Classes.QCSamplerClass import QCSampler
+from JQCLib.Utils.Utilities import fromRaw
 
 #Wrapper around Qiskit's Sampler, to make it into a model 
 class jQiskitSampler:

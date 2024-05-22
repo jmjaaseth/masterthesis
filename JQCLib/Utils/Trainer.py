@@ -1,3 +1,7 @@
+###########################################
+#      Code By Jørgen Mjaaseth, 2023      #
+###########################################
+
 from JQCLib.Classes.Optimizers import Adam
 from JQCLib.Classes.jQNNClass import jQNN
 from JQCLib.Classes.JMStateVectorSimClass import JMStateVectorSim, FeatureEncode

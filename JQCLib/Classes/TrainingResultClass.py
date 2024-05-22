@@ -1,3 +1,7 @@
+###########################################
+#      Code By Jørgen Mjaaseth, 2023      #
+###########################################
+
 import numpy as np
 from matplotlib import pyplot as plt
 

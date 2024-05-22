@@ -1,3 +1,7 @@
+###########################################
+#      Code By Jørgen Mjaaseth, 2023      #
+###########################################
+
 import sys
 if sys.version_info < (3, 8):
     import pickle5 as pickle
