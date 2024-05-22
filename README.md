@@ -49,7 +49,7 @@ $$
 \begin{split}
 \text{(1)} & : Q \text{ is invariant under local unitaries}\\
 \text{(2)} & : 0 \leq Q \leq 1\\
-\text{(3)} & : Q(\ket{\psi}) = 0 \; \text{ if and only if} \; \ket{v} \text{is a product state.}
+\text{(3)} & : Q(\ket{\psi}) = 0 \text{ if and only if } \ket{v} \text{is a product state.}
 \end{split}
 $$
 
