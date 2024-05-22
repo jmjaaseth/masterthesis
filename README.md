@@ -1,12 +1,5 @@
 # About the project
 
-<!--- Some latex definitions for the equations -->
-$
-\newcommand \nnorm[2]{\left\lVert#1\right\rVert_{#2}}
-$
-
-
-
 This project...
 
 ## Framework for quantum machine learning
@@ -16,7 +9,7 @@ This project...
 ### Deviation from Haar distribution
 
 $$
-A^{(t)}(C)= \nnorm{\int_{Haar}^{} (\ket{\psi}\bra{\psi})^{\otimes t}d\psi - \int_{\Theta}^{} (\ket{\phi}\bra{\phi})^{\otimes t}d\theta}{HS}
+A^{(t)}(C)= \left \lVert \int_{Haar}^{} (\ket{\psi}\bra{\psi})^{\otimes t}d\psi - \int_{\Theta}^{} (\ket{\phi}\bra{\phi})^{\otimes t}d\theta \right \rVert_{HS}
 $$
 
 ### Kullback–Leibler divergence
