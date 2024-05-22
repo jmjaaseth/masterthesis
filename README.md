@@ -44,9 +44,14 @@ The following figure shows some single qubit example circuits of increasing expr
 Although numerous proposed methods for quantifying entanglement are available in the literature, the Meyer-Wallach (MW) entanglement measure, often denmoted $Q$, emerges as a particularly compelling choice.
 
 Meyer and Wallach proves that $Q$ has the following properties:
-1. $ Q $ is invariant under local unitaries
-2. $ 0 \le Q \leq 1 $
-3. $ Q(\ket{\psi}) = 0 $ if and only if $\ket{v}$ is a product state.
+
+$$
+\begin{split}
+\text{(1)} & : Q \text{ is invariant under local unitaries}\\
+\text{(2)} & : 0 \leq Q \leq 1\\
+\text{(3)} & : Q(\ket{\psi}) = 0 \text{ if and only if} \ket{v} \text{is a product state.}
+\end{split}
+$$
 
 For an estimation of the Meyer-Wallach measure for a given circuit $C$ we can create an ensemble of parameterized states $S$ by randomly sampling parameters for the circuit. The entangling capability $Ent$ of $C$ is calculated as the average $Q(\ket{s})$ over all states $\ket{s} \in S$:
 
