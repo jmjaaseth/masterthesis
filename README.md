@@ -16,12 +16,6 @@ $$
 A^{(t)}(C)= \left \lVert \int_{Haar}^{} (\ket{\psi}\bra{\psi})^{\otimes t}d\psi - \int_{\Theta}^{} (\ket{\phi}\bra{\phi})^{\otimes t}d\theta \right \rVert_{HS}
 $$
 
-$$
-A^{(t)}(C)= \left \lVert X \right \rVert_{HS}
-$$
-
-
-
 The Hilbert Schmidt distance is computed between to terms. The first term is the integral over the state $\ket{\psi}$ distributed with respect to the Haar measure. The second term is taken over all states over the measure induced by uniformly sampling parameters of the circuit $\theta \in \Theta$.
 
 The definition implies that circuits with low $\mathcal{A}^{(t)}(C)$ has high expressibility. As $\mathcal{A}^{(t)}(C)$ approached zero, the states generated from C are almost equally distributed.
@@ -48,9 +42,9 @@ The following figure shows some single qubit example circuits of increasing expr
 Although numerous proposed methods for quantifying entanglement are available in the literature, the Meyer-Wallach (MW) entanglement measure, often denmoted $Q$, emerges as a particularly compelling choice.
 
 Meyer and Wallach proves that $Q$ has the following properties:
-1. $ Q \text{ is invariant under local unitaries} $
-2. $ 0 \leq Q \leq 1 $
-3. $ Q(\ket{\psi}) = 0 \text{ if and only if} \ket{v} \text{is a product state.} $
+1. $ Q $ is invariant under local unitaries
+2. $ 0 \le Q \leq 1 $
+3. $ Q(\ket{\psi}) = 0 $ if and only if $\ket{v}$ is a product state.
 
 For an estimation of the Meyer-Wallach measure for a given circuit $C$ we can create an ensemble of parameterized states $S$ by randomly sampling parameters for the circuit. The entangling capability $Ent$ of $C$ is calculated as the average $Q(\ket{s})$ over all states $\ket{s} \in S$:
 
