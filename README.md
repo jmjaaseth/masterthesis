@@ -15,6 +15,13 @@ Kouhei Nakaji and Naoki Yamamoto, building on work by Sukin Sim, Peter D. Johnso
 $$
 A^{(t)}(C)= \left \lVert \int_{Haar}^{} (\ket{\psi}\bra{\psi})^{\otimes t}d\psi - \int_{\Theta}^{} (\ket{\phi}\bra{\phi})^{\otimes t}d\theta \right \rVert_{HS}
 $$
+
+$$
+A^{(t)}(C)= \left \lVert X \right \rVert_{HS}
+$$
+
+
+
 The Hilbert Schmidt distance is computed between to terms. The first term is the integral over the state $\ket{\psi}$ distributed with respect to the Haar measure. The second term is taken over all states over the measure induced by uniformly sampling parameters of the circuit $\theta \in \Theta$.
 
 The definition implies that circuits with low $\mathcal{A}^{(t)}(C)$ has high expressibility. As $\mathcal{A}^{(t)}(C)$ approached zero, the states generated from C are almost equally distributed.
