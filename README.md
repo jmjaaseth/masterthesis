@@ -25,9 +25,11 @@ The definition implies that circuits with low $\mathcal{A}^{(t)}(C)$ has high ex
 To estimate the probability distribution of fidelity for a circuit, we can randomly sample parameters $\theta \in \Theta$ and $\phi \in \Phi$ to obtain pairs of parameterized states. We will denote the probability distribution of fidelity $F$ for a circuit $C$ as $P(C, F)$. 
 
 The probability distribution $P_{Haar}(F)$ could be sampled in a similar manner, using fidelities $F = |\braket{\psi|\psi'}|^2$, where $\ket{\psi}$ and $\ket{\psi'}$ are sampled according to the Haar measure. However, the analytical form of the probability density function of fidelities for a Haar random state is known. For fidelity $F$ and a Hilbert space of dimension $N$, the function is given by:
+
 $$
     P_{Haar}(F) = (N - 1)(1 - F)^{N-2}
 $$
+
 For a comparison of the two distributions we use Kullback–Leibler (KL) divergence. For the distributions $P(C, F)$ and $P_{Haar}(F)$, we obtain an expression $\mathcal{E} (C)$ for the expressibility of a circuit $C$:
 
 $$
