@@ -254,8 +254,10 @@ class JMStateVectorSim:
         #Compute and return
         return self.__MTRX(state,theta)
 
+    #Perhaps useful?
     def show(self, Reversed = False):
         print("Not implemented")
 
+    #Call this for forward passing
     def forward(self, features, weights):
         return self.__measure(features, weights)
