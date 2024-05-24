@@ -36,7 +36,7 @@ $$
 \mathcal{E} (C) = D_{KL} (P(C, F) \parallel P_{Haar}(F)) = \int_{0}^{1} P(C, F) \, log \frac{P(C, F)}{P_{Haar}(F)} \,dF
 $$
 
-The following figure shows some single qubit example circuits of increasing expressebility, going from left to right. Note that fixed gates circuits in this configuration has a KL divergence of $(2^n - 1) \ln(n_{bins}) = \ln (1000) \approx 6.908 $.
+The following figure shows some single qubit example circuits of increasing expressebility, going from left to right. Note that fixed gates circuits in this configuration has a KL divergence of $(2^n - 1) \ln(n_{bins}) = \ln (200) \approx 5.298 $.
 
 ![KL divergence.](KLDiv.png)
 
