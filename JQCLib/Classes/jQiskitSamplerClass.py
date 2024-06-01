@@ -16,11 +16,26 @@ from JQCLib.Utils.Utilities import fromRaw
 #Wrapper around Qiskit's Sampler, to make it into a model 
 class jQiskitSampler:
 
-    @classmethod
-    def FromArray(cls, data):
-        return cls(fromRaw(data))
+    #Default featuremap
+    @staticmethod
+    def DefaultFeatureMap(no_qubits):
 
-    def __init__(self, CircuitData):
+        feature_map = QuantumCircuit(no_qubits)
+
+        #Vector for encoding the features
+        ip = ParameterVector('Features',no_qubits) 
+
+        for i in range(no_qubits):
+            feature_map.h(i)
+            feature_map.rz(ip[i], i)
+
+        return feature_map
+
+    @classmethod
+    def FromArray(cls, data, Featuremap = DefaultFeatureMap):
+        return cls(fromRaw(data), Featuremap)
+
+    def __init__(self, CircuitData, Featuremap):
         
         ansatz = QCSampler(CircuitData).Circuit()
 
@@ -33,26 +48,21 @@ class jQiskitSampler:
 
         #The circuit
         self.circuit = QuantumCircuit(self.no_qubits)
-        self.circuit.compose(self.__getFeatureMap(), range(self.no_qubits), inplace=True)
-        self.circuit.compose(ansatz, range(self.no_qubits), inplace=True)
-        self.circuit.measure_all()        
         
-    def __getFeatureMap(self):
-
-        feature_map = QuantumCircuit(self.no_qubits)
-
-        #Vector for encoding the features
-        ip = ParameterVector('Features',self.no_qubits) 
-
-        for i in range(self.no_qubits):
-            feature_map.h(i)
-            feature_map.rz(ip[i], i)
-
-        return feature_map
+        self.circuit.compose(Featuremap(self.no_qubits), range(self.no_qubits), inplace=True)
+        self.circuit.compose(ansatz, range(self.no_qubits), inplace=True)
+        self.circuit.measure_all()
 
     def __getQuasiProb(self, features, weights):
 
-        job = self.sampler.run(self.circuit, features.tolist() + weights.tolist())
+        #Check for nparrays & convert to lists
+        if not isinstance(features, list):
+            features = features.tolist()
+
+        if not isinstance(weights, list):
+            weights = weights.tolist()
+
+        job = self.sampler.run(self.circuit, features + weights)
         return job.result().quasi_dists[0]
     
     def __addMissing(self, dict):
@@ -64,7 +74,7 @@ class jQiskitSampler:
     def show(self,Reversed = False):
         display(self.circuit.draw("mpl",reverse_bits = Reversed))    
     
-    def forward(self, features, weights):
+    def forward(self, features, weights):       
 
         #Add all values
         return self.__addMissing(self.__getQuasiProb(features, weights))
