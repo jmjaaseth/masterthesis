@@ -39,7 +39,7 @@ $$
 $$
 
 Due to a finite sample size, it was necessary to discretize probability distributions as histograms for numerical estimation of KL divergence. The following figure shows some single qubit example circuits of increasing expressebility, going from left to right. For visualization purposes, the number of bins for the histograms was set to 200. Note that fixed gates circuits in this configuration has a KL divergence of $(2^n - 1) \ln(n_{bins}) = \ln (200) \approx 5.298 $.
-<br><br><br>
+
 ![KL divergence.](KLDiv.png)
 
 ### The Meyer-Wallach entanglement measure
