@@ -43,7 +43,7 @@ Due to a finite sample size, it was necessary to discretize probability distribu
 ![KL divergence.](KLDiv.png)
 
 ### The Meyer-Wallach entanglement measure
-Although numerous proposed methods for quantifying entanglement are available in the literature, the Meyer-Wallach (MW) entanglement measure, often denmoted $Q$, emerges as a particularly compelling choice.
+Although numerous proposed methods for quantifying entanglement are available in the literature, the Meyer-Wallach (MW) entanglement measure [3], often denoted $Q$, emerges as a particularly compelling choice.
 
 Meyer and Wallach proves that $Q$ has the following properties:
 
@@ -61,7 +61,7 @@ $$
 Ent(C) = \frac{2}{|S|} \sum_{\ket{s} \in S} \left(1 - \frac{1}{n} \sum_{j = 1}^{n} Tr \left [ \rho \left (\ket{s})_j^2 \right ] \right ) \right )
 $$
 
-Bibliography
+<b>Bibliography</b>
 
 [1]
 Sukin Sim, Peter D. Johnson, and Al ́an Aspuru-Guzik. Expressibility and entangling capability of parameterized quantum circuits for hybrid quantum-classical algorithms. 2019.
@@ -70,3 +70,7 @@ https://arxiv.org/pdf/1905.10876.pdf
 [2]
 Kouhei Nakaji and Naoki Yamamoto. Expressibility of the alternating layered ansatz for quantum computation. 2021.
 https://arxiv.org/pdf/2005.12537.pdf
+
+[3]
+David A. Meyer and Nolan R. Wallach. Global entanglement in multiparticle systems. 2001.
+https://arxiv.org/pdf/quant-ph/0108104.pdf
